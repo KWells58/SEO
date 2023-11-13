@@ -1,134 +1,313 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="ZazaForFeet offers revolutionary spray-on shoes for a new era of footwear. Join our membership for exclusive benefits and updates. Locally owened and operated in Lakeland Florida">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-22H4EKQBRS"></script>
-	<script>
- 		 window.dataLayer = window.dataLayer || [];
- 		 function gtag(){dataLayer.push(arguments);}
- 		 gtag('js', new Date());
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let slideIndex = 0;
+            showSlides();
 
-	 	 gtag('config', 'G-22H4EKQBRS');
-	</script>
-    <title>ZazaForFeet - Innovative Zaza Spray-On Shoes</title>
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+
+            // Shop Now button click listener
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Thank you for your interest! Shopping functionality coming soon.');
+                });
+            });
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-22H4EKQBRS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-22H4EKQBRS');
+    </script>
+    <title>ZazaForFeet | Best Spray On Shoes In Lakeland!</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #70AE6E;
-            font-family: Arial, sans-serif;
+            background-color: #0a0a0a; /* Dark background for the body */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #cfcfcf; /* Lighter text color for readability */
         }
 
         header {
-            background-color: #ffffff;
+            background-color: #1a1a1a; /* Darker header */
+            color: #cfcfcf; /* Lighter header text color for readability */
             text-align: center;
             padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Darker shadow for depth */
         }
 
         header h1 {
-            color: #70AE6E;
-        }
-        main h3 {
-            color: #70AE6E;
+            color: #333;
         }
 
         nav {
-            background-color: #70AE6E;
+            background-color: #004d00;
+            padding: 10px;
             text-align: center;
-	    list-style: none;
-	    padding: 1opx 0;
-            border-top-left-radius: 20px; /* Add border radius to the top-left corner */
-            border-top-right-radius: 20px; /* Add border radius to the top-right corner */
         }
 
         nav ul {
             list-style: none;
-            padding: 1px ;
+            padding: 0;
         }
 
-        nav li {
+        nav ul li {
             display: inline;
             margin-right: 20px;
         }
 
         nav a {
             text-decoration: none;
-            color: #ffffff;
-            transition: color 0.3s; /* Add transition effect for color change */
-        }
-
-        nav a:hover {
-            color: #ffffff; /* Change text color on hover */
-            opacity: 0.7; /* Add opacity on hover to dim a little */
+            color: #f5f5f5;
+            font-weight: 700;
         }
 
         main {
-            background-color: #ffffff;
             padding: 20px;
             text-align: center;
         }
 
-        h2 {
-            color: #70AE6E;
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        footer {
-            background-color: #ffffff;
-            text-align: center;
+        .slides {
+            display: none;
+        }
+
+        .slide-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .article-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             padding: 20px;
-        }
-
-        h2 {
-            color: #70AE6E;
-        }
-
-        footer {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 10px;
         }
 
         article {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #70AE6E;
-            border-radius: 2px;
-            background-color: #f4f4f4;
+            background-color: #1a1a1a; /* Darker article background */
+            color: #cfcfcf;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for transform and shadow */
+        }
+        article:hover {
+            transform: translateY(-5px); /* Added hover effect */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Added shadow effect on hover */
         }
 
-        article h3 {
-            color: #70AE6E;
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
-        article p {
-            color: #333;
-        }
-
-        /* Add button styles */
         button {
-            background-color: #70AE6E;
-            color: #ffffff;
+            background-color: #006400; /* Dark green for buttons */
+            color: #fff;
             border: none;
-            border-radius: 5px;
             padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
             cursor: pointer;
-            transition: background-color 0.3s, opacity 0.3s; /* Add transition effect for background color and opacity */
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s; /* Added transform to the transition */
+
         }
 
         button:hover {
-            background-color: #ffffff; /* Change button background on hover */
-            color: #70AE6E; /* Change text color on hover */
-            opacity: 0.7; /* Add opacity on hover to dim a little */
+            background-color: #004d00;
+            transform: scale(1.05); /* Added scaling effect on hover */
         }
 
-	/* Style the anchor within a button */
-button a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the button's text color (inherit) */
-}
+        footer {
+            background-color: #1a1a1a; /* Footer also gets the darker background */
+            color: #cfcfcf;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #333;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #006400;
+        }
+        .slideshow-container {
+            max-width: 500px; /* Adjusted width */
+            position: relative;
+            margin: auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slide-image {
+            width: 100%;
+            height: auto; /* Change this if you need a fixed height */
+        }
+        .page-break {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .innovation-break {
+            background: #1a4731; /* Dark green for a rich look */
+            color: #f1f1f1; /* Soft white for text */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .product-break {
+            background: linear-gradient(to right, #0b3d20, #1a4731, #2b2f33); /* Gradient with dark greens and ending in dark grey */
+            color: #ffffff; /* Bright white for contrast */
+            padding-bottom: 0; /* Unchanged */
+
+        }
+
+        .subscribe-break {
+            background-color: black; /* Dark color leaning towards green tones */
+            color: #ffffff; /* Bright white for legibility */
+            text-shadow: 1px 1px 2px #000; /* Soft text shadow for a subtle glowing effect */
+        }
+
+
+        .large-text {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .page-break img {
+            width: 30%;
+            height: auto;
+            margin: 0 auto; /* Center image */
+            display: block;
+            padding-bottom: 50px;
+        }
+        /* Add this style within your <style> tag in the <head> */
+        .catalog-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .catalog-item {
+            border: none;
+            display: block;
+            background-size: cover;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .catalog-item:hover {
+            transform: scale(1.05);
+        }
+
+        .catalog-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .catalog-item-wrapper {
+            position: relative;
+            margin: 10px;
+        }
+        .catalog-title {
+            color: #333;
+            font-size: 2em; /* Choose a size that fits your design */
+            margin-top: 50px;
+            text-align: center;
+        }
+        .new-product-break {
+            background: linear-gradient(to bottom, #0b3d20, #1a4731); /* Dark green gradient for a rich, deep look */
+            color: #dcdcdc; /* Soft grey for text, to maintain readability */
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+        }
+        .future-product-break {
+            background: black; /* Dark green gradient for a rich, deep look */
+            color: #dcdcdc; /* Soft grey for text, to maintain readability */
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+        }
+
+        .new-product-text {
+            font-size: 24px; /* Size is maintained */
+            color: #f1f1f1; /* Brighter text color for contrast against dark background */
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for a subtle glow effect */
+        }
+
+        .new-product-break img {
+            width: 30%;
+            height: auto;
+            margin: 20px auto; /* Set top and bottom margin to 20px, and left and right margin to auto */
+            display: block;
+            border-radius: 8px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -138,7 +317,7 @@ button a {
 
 <nav>
     <ul>
-        <li><a href="http://zazaforfeet.com">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="aboutUs.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -146,22 +325,122 @@ button a {
 </nav>
 
 <main>
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/X__5q2nU2rA?si=zKb_QOxySHMLX05U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="slides fade">
+            <a href="link-to-slide-1.html"> <!-- You can specify the link for each slide here -->
+                <img class="slide-image" src="../../SEO/img/airhops.jpeg" alt="Slide 1">
+            </a>
+        </div>
+        <div class="slides fade">
+            <a href="link-to-slide-2.html">
+                <img class="slide-image" src="../../SEO/img/airhops.jpeg" alt="Slide 2">
+            </a>
+        </div>
+        <div class="slides fade">
+            <a href="link-to-slide-3.html">
+                <img class="slide-image" src="../../SEO/img/airhops.jpeg" alt="Slide 3">
+            </a>
+        </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </div>
-    <h2>Welcome to ZazaForFeet</h2>
-    <p>Introducing ZazaForFeet's revolutionary spray-on shoes. Say goodbye to traditional shoes and experience the future of footwear. Join our membership for exclusive benefits and updates.</p>
-    <button><a href="http://zazaforfeet.com/form.html">Subscribe and Save</a></button>
+
+
+    <h2>Featured Shoes</h2>
+    <!-- Articles/Products -->
+    <div class="article-container">
+        <article>
+            <img src="img/airhops.jpeg" alt="Shoe 1">
+            <h3>Product Name 1</h3>
+            <p>Description of Product 1. This stylish shoe is perfect for any occasion.</p>
+            <button>Shop Now</button>
+        </article>
+        <article>
+            <img src="/img/airhops.jpeg" alt="Shoe 2">
+            <h3>Product Name 2</h3>
+            <p>Description of Product 2. Comfort meets elegance with this design.</p>
+            <button>Shop Now</button>
+        </article>
+        <article>
+            <img src="/img/airhops.jpeg" alt="Shoe 3">
+            <h3>Product Name 3</h3>
+            <p>Description of Product 3. A classic look that never goes out of style.</p>
+            <button>Shop Now</button>
+        </article>
+    </div>
+    <div class="page-break innovation-break">
+        <div class="large-text">The greatest innovation of the century!</div>
+        <p>Our spray-on shoes are a breakthrough in footwear technology, offering unparalleled convenience and custom fit for every user. Say goodbye to the hassle of tying shoelaces or squeezing into tight shoes – just spray on and step out in style!</p> <!-- Added paragraph for spray-on shoes -->
+        <button onclick="alert('Learn more about our innovation!')">Learn More</button>
+    </div>
+    <h2 class="catalog-title">Our Catalog</h2>
+    <div class="catalog-section">
+        <div class="catalog-item-wrapper">
+            <a href="/sneakers.html">
+                <div class="catalog-item" style="background-image: url('img/sneakers.jpg');">
+                    <div class="catalog-label">Sneakers</div>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-item-wrapper">
+            <a href="/sandals.html">
+                <div class="catalog-item" style="background-image: url('img/sandals.jpg');">
+                    <div class="catalog-label">Sandals</div>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-item-wrapper">
+            <a href="/crocs.html">
+                <div class="catalog-item" style="background-image: url('img/crocs.jpg');">
+                    <div class="catalog-label">Crocs</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- Page break for "Newest product" with an image underneath -->
+    <div class="page-break product-break">
+        <div class="large-text">Newest Product</div>
+        <!-- Placeholder for the image, replace 'placeholder.png' with your actual image path -->
+        <img src="img/new_product.jpg" alt="New Product Image">
+
+    </div>
+    <div class="future-product-break">
+        <div class="large-text">Upcoming Attractions</div>
+        <p class="new-product-text">Stay tuned for the launch of our future products, designed with cutting-edge technology to revolutionize the way you think about footwear.</p>
+        <img src="img/future-product-teaser.jpg" alt="Future Product Teaser">
+        <button onclick="alert('More info coming soon! Stay tuned!')">Notify Me!</button>
+    </div>
+    <div class="page-break new-product-break">
+        <div class="large-text">More about our product</div>
+        <p class="new-product-text"> Meet Zaza, our spray on shoe spray that's engineered for the perfect fit. Embrace the innovation that walks with you.</p>
+        <img src="img/sparyonzaza.jpg" alt="Our Latest Product">
+        <button onclick="alert('Even more about us!')">Explore</button>
+    </div>
+
+    <div class="page-break subscribe-break">
+        <div class="large-text">Subscribe for discounts!</div>
+        <p>Join the Zaza family with a Zaza subscription and save 15% or more on every purchase! Stay ahead of the trend curve, and never miss out on exclusive deals and offers specially curated for our subscribers.</p> <!-- Added paragraph for subscription savings -->
+        <button onclick="alert('Subscribe for great deals!')"><a href="http://zazaforfeet.com/form.html">Subscribe</a></button>
+    </div>
+
 </main>
 
 <footer>
-	&copy; 2023 ZazaForFeet
-	<address>
-		Written by <a href="mailto:zazaforfeet@gmail.com">ZazaForFeet</a>.<br>
-		Lakeland Fl<br>
-		USA
-	</address>
+    &copy; 2023 ZazaForFeet
+    <address>
+        Written by <a href="mailto:zazaforfeet@gmail.com">ZazaForFeet</a>.<br>
+        Lakeland Fl<br>
+        USA
+    </address>
 </footer>
 </body>
 </html>
-
