@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLDXWF6DNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QLDXWF6DNZ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Zaza For Feet - Membership</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      color: black; /* Changed text color to black */
+    }
+    footer {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      color: black;
+    }
+
+    header {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      color: #70AE6E; /* Header text color remains green */
+    }
+
+    nav {
+      background-color: #70AE6E;
+      text-align: center;
+      list-style: none;
+      padding: 1px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 1px;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      opacity: 0.7;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .radio-group {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #submit-button,
+    #reset-button {
+      padding: 10px 20px;
+      background-color: #70AE6E;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 25px; /* Make buttons round */
+      transition: background-color 0.3s, opacity 0.3s;
+    }
+
+    #submit-button:hover,
+    #reset-button:hover {
+      background-color: #60995D;
+    }
+
+    .membership-tiers {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .membership-tier {
+      border: 1px solid #70AE6E;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    /* Green text in the new area */
+    .new-area {
+      color: #70AE6E;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("membership-form");
+
+      function setBackground(element) {
+        // Reset background color for all form elements
+        const elements = form.querySelectorAll("input, select");
+        elements.forEach((el) => {
+          el.style.backgroundColor = "";
+        });
+
+        // Set background color for the element in focus
+        element.style.backgroundColor = "#ffffcc";
+      }
+
+      function validateFirstName(firstName) {
+        // Capitalize the first letter of each word
+        const words = firstName.split(" ");
+        for (let i = 0; i < words.length; i++) {
+          words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+        }
+        return words.join(" ");
+      }
+
+      function validateLastName(lastName) {
+        // Capitalize the first letter of each word
+        return lastName.replace(/\b\w/g, (char) => char.toUpperCase());
+      }
+
+      function validatePhoneNumber(phoneNumber) {
+        return /^\d+(-\d+)*$/.test(phoneNumber);
+      }
+
+      function validateEmail(email) {
+        return /^[A-Za-z0-9._%+-]+@[A-Za-z0.9.-]+\.[A-Za-z]{2,}$/.test(email);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const firstNameInput = document.getElementById("first-name");
+        const lastNameInput = document.getElementById("last-name");
+        const phoneInput = document.getElementById("phone-number");
+        const emailInput = document.getElementById("email");
+        const tierInput = document.querySelector("input[name='tier']:checked");
+
+        // Validation for first name
+        const validatedFirstName = validateFirstName(firstNameInput.value);
+        firstNameInput.value = validatedFirstName;
+
+        // Validation for last name
+        const validatedLastName = validateLastName(lastNameInput.value);
+        lastNameInput.value = validatedLastName;
+
+        // Validation for phone number
+        if (!validatePhoneNumber(phoneInput.value)) {
+          alert("Invalid phone number. Please use numbers and dashes only.");
+          setBackground(phoneInput);
+          return;
+        }
+
+        // Validation for email
+        if (!validateEmail(emailInput.value)) {
+          alert("Invalid email address.");
+          setBackground(emailInput);
+          return;
+        }
+
+        // Validation for radio button (tier)
+        if (!tierInput) {
+          alert("Please select a tier option.");
+          return;
+        }
+
+        // Form is valid, you can submit it
+        this.submit();
+      });
+
+      // Reset button functionality
+      const resetButton = document.getElementById("reset-button");
+      resetButton.addEventListener("click", function () {
+        form.reset();
+        // Reset background color for all form elements
+        const elements = form.querySelectorAll("input, select");
+        elements.forEach((el) => {
+          el.style.backgroundColor = "";
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+<header>
+  <h1>ZazaForFeet</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutUs.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>Membership</h1>
+
+  <!-- Membership Tier Descriptions -->
+  <div class="membership-tiers">
+    <div class="membership-tier">
+      <h2>Bronze Membership</h2>
+      <p>Our basic membership tier with essential benefits:</p>
+      <ul>
+        <li>Access to exclusive events</li>
+        <li>Monthly newsletter</li>
+      </ul>
+    </div>
+
+    <div class="membership-tier">
+      <h2>Silver Membership</h2>
+      <p>Upgrade for more advantages:</p>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>10% off on our products</li>
+      </ul>
+    </div>
+
+    <div class="membership-tier">
+      <h2>Gold Membership</h2>
+      <p>The premium membership with top-tier perks:</p>
+      <ul>
+        <li>All Bronze and Silver benefits</li>
+        <li>20% off on our products</li>
+        <li>Priority access to new releases</li>
+      </ul>
+    </div>
+  </div>
+
+  <form id="membership-form">
+    <div class="form-group">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone-number">Phone Number:</label>
+      <input type="text" id="phone-number" name="phone-number" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Membership Tier:</label>
+      <div class="radio-group">
+        <input type="radio" id="tier1" name="tier" value="Bronze" required>
+        <label for="tier1">Bronze</label>
+      </div>
+      <div class="radio-group">
+        <input type="radio" id="tier2" name="tier" value="Silver" required>
+        <label for="tier2">Silver</label>
+      </div>
+      <div class="radio-group">
+        <input type="radio" id="tier3" name="tier" value="Gold" required>
+        <label for="tier3">Gold</label>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button id="submit-button" type="submit">Join Now</button>
+      <button id="reset-button" type="reset">Reset</button>
+    </div>
+  </form>
+</div>
+<footer>
+  &copy; 2023 ZazaForFeet
+  <address>
+    Written by <a href="mailto:zazaforfeet@gmail.com">ZazaForFeet</a><br>
+    Lakeland Fl<br>
+    USA
+  </address>
+</footer>
+</body>
+</html>
+

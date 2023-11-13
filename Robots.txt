@@ -1,0 +1,4 @@
+Sitemap: http://zazaforfeet.com/sitemap.xml
+User-agent: *
+Allow: membership-kw.html
+Allow: blog.html
