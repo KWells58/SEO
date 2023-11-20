@@ -38,14 +38,18 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #70AE6E;
-            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #cfcfcf;
         }
 
+
         header {
-            background-color: #ffffff;
+            background-color: #1a1a1a;
+            color: #cfcfcf;
             text-align: center;
             padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         header h1 {
@@ -56,19 +60,19 @@
             color: #70AE6E;
         }
 
-         nav {
-            background-color: #70AE6E;
+        nav {
+            background-color: #004d00;
+            padding: 10px;
             text-align: center;
-            border-top-left-radius: 20px; /* Add border radius to the top-left corner */
-            border-top-right-radius: 20px; /* Add border radius to the top-right corner */
         }
+
 
         nav ul {
             list-style: none;
-            padding: 1px;
+            padding: 0;
         }
 
-        nav li {
+        nav ul li {
             display: inline;
             margin-right: 20px;
         }
@@ -76,6 +80,7 @@
         nav a {
             text-decoration: none;
             color: #ffffff;
+            font-weight: 700;
             transition: color 0.3s; /* Add transition effect for color change */
         }
 
@@ -87,7 +92,6 @@
 
 
         main {
-            background-color: #ffffff;
             padding: 20px;
             text-align: center;
         }
@@ -97,17 +101,16 @@
         }
 
         footer {
-            background-color: #ffffff;
+            background-color: transparent;
             text-align: center;
             padding: 20px;
         }
 
         article {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #70AE6E;
-            border-radius: 2px;
-            background-color: #f4f4f4;
+            background-color: #1a1a1a;
+            color: #222;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
 
         article h3 {
@@ -122,7 +125,7 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: whitesmoke;
         }
 
         .blog-post {
@@ -142,6 +145,7 @@
 
         .blog-post p {
             font-size: 16px;
+            color: #222;
             line-height: 1.6;
         }
 
@@ -157,57 +161,79 @@
 
         .blog-post li {
             font-size: 16px;
+            color: #222;
             line-height: 1.6;
         }
 
-        .form-group {
-            margin-bottom: 15px;
+        @media only screen and (max-width: 600px) {
+            /* Mobile styles */
+
+            header {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            article {
+                padding: 10px;
+            }
+
+            article h3 {
+                font-size: 20px;
+            }
+
+            article p {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .blog-post {
+                padding: 10px;
+            }
+
+            .blog-post h1 {
+                font-size: 20px;
+            }
+
+            .blog-post p {
+                font-size: 14px;
+            }
+
+            .blog-post h2 {
+                font-size: 18px;
+            }
+
+            .blog-post ol {
+                margin-left: 10px;
+            }
+
+            .blog-post li {
+                font-size: 14px;
+            }
         }
 
-        .form-group label {
-            display: block;
-            font-weight: bold;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group input[type="password"],
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-group select {
-            height: 40px;
-        }
-
-        .radio-group {
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        #submit-button, #reset-button {
-            background-color: #70AE6E;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        #reset-button {
-            background-color: #ccc;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #ffffff;
-            padding: 10px;
-        }
     </style>
 </head>
 <body>
