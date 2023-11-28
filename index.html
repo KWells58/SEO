@@ -44,7 +44,7 @@
     </script>
     <title>ZazaForFeet | Innovative Spray-On Shoes | Stylish Footwear | Lakeland Online Shoe Store</title>
     <meta name="description" content="Discover ZazaForFeet's range of spray-on shoes. Explore our innovative, stylish footwear collection. The best shoe store in Lakeland for comfort and design.">
-    <meta name="keywords" content="shoe spray, footwear freshener, odor eliminator, sneaker care, shoe hygiene, Lakeland shoe care, Zaza for Feet, foot freshness, shoe deodorizer, sole spray, shoe maintenance, refreshing foot spray, Lakeland shoe solutions, innovative shoe care, footwear revitalize, shoe odor control, Lakeland foot wellness, instant shoe refresh, Zaza spray canister, Lakeland shoe essentials, sneaker spray, foot odor neutralizer, Zaza's shoe magic, Lakeland foot care revolution, spray-on shoe love." />
+    <meta name="keywords" content="shoe spray, footwear freshener, odor eliminator, sneaker care, shoe hygiene, Lakeland shoe care, Zaza for Feet, foot freshness, shoe deodorizer, sole spray, shoe maintenance, refreshing foot spray, Lakeland shoe solutions, innovative shoe care, footwear revitalize, shoe odor control, Lakeland foot wellness, instant shoe refresh, Zaza spray canister, Lakeland shoe essentials, sneaker spray, foot odor neutralizer, Zaza's shoe magic, Lakeland foot care revolution, spray-on shoe love, online, online store." />
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -83,26 +83,50 @@
             color: white;
         }
 
-        nav {
-            background-color: #004d00;
-            padding: 10px;
-            text-align: center;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #f5f5f5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
+        .navbar-section {
+            display: flex;
+            justify-content: space-around;
+            flex: 1;
         }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
+        .navbar-logo {
+            display: flex;
+            justify-content: center;
+            flex-grow: 0;
+            flex-shrink: 0;
         }
 
-        nav a {
+        .navbar-logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
             text-decoration: none;
-            color: #f5f5f5;
-            font-weight: 700;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            padding: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
         }
 
         main {
@@ -400,18 +424,27 @@
     </style>
 </head>
 <body>
-<header>
-    <h1>ZazaForFeet</h1>
-</header>
 
-<nav>
-    <ul>
-        <li><a href="http://zazaforfeet.com">Home</a></li>
-        <li><a href="aboutUs.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="blog.html">Blog</a></li>
-    </ul>
-</nav>
+
+<div class="navbar">
+    <div class="navbar-section">
+        <ul>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">LOOKBOOK</a></li>
+            <li><a href="form.html">SUBSCRIBE</a></li>
+        </ul>
+    </div>
+    <div class="navbar-logo">
+        <a href="#">ZAZAFORFEET</a>
+    </div>
+    <div class="navbar-section">
+        <ul>
+            <li><a href="aboutUs.html">ABOUT</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+</div>
 
 <main>
     <!-- Slideshow container -->
