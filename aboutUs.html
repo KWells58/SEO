@@ -10,32 +10,34 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #0a0a0a;
-            color: #cfcfcf;
+            background-color: #000000;
+            color: #FFFFFF;
         }
 
         header {
-            background-color: #1a1a1a;
-            color: #cfcfcf;
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text */
             text-align: center;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         header h1 {
-            color: #333;
+            color: #70AE6E;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0; /* Adjust padding to only top and bottom */
-            width: 100%; /* Ensure the navbar takes full width */
-            background-color: #f5f5f5;
+            padding: 10px 0;
+            width: 100%;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 0; /* Removes any margin */
+            margin: 0;
+            background-image: linear-gradient(to right, #a4c639, #387c44); /* Gradient from light green to dark green */
+            color: #000000;
         }
+
 
         .navbar-section {
             display: flex;
@@ -53,7 +55,7 @@
         .navbar-logo a {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: #70AE6E;
             text-decoration: none;
         }
 
@@ -70,8 +72,8 @@
 
         .navbar a {
             text-decoration: none;
-            color: #333;
             font-weight: 500;
+            color: #000000;
         }
 
         main {
@@ -80,14 +82,14 @@
         }
 
         article {
-            color: #222;
+            background-color: #202020;
+            color: #FFFFFF;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 10px;
-            padding: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
             border: 1px solid #70AE6E;
-            background-color: #f4f4f4;
         }
 
         article:hover {
