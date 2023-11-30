@@ -25,7 +25,7 @@
             width: 100%;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 0;
-            background-image: linear-gradient(to right, #a4c639, #387c44); /* Gradient from light green to dark green */
+            background-image: linear-gradient(to right, #a4c639, #387c44);
             color: #000000;
         }
 
@@ -71,34 +71,34 @@
         main {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around; /* Centers the products with equal space around them */
+            justify-content: space-around;
             padding: 20px;
-            align-items: flex-start; /* Align items to the top */
+            align-items: flex-start;
         }
 
         .products-section {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px; /* Adjust the space between products */
-            justify-content: center; /* Center the products in the section */
+            gap: 20px;
+            justify-content: center;
         }
 
         .product {
-            flex: 0 1 300px; /* Set a base width for your products */
+            flex: 0 1 300px;
             margin-bottom: 20px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center the items within the product div */
+            align-items: center;
         }
 
         .product img {
-            max-width: 100%; /* Ensure the image scales to the parent container */
-            height: auto; /* Maintain the aspect ratio */
+            max-width: 100%;
+            height: auto;
         }
 
         .product-info {
-            width: 100%; /* Ensure the text container fills the product div */
+            width: 100%;
             padding: 0 15px;
             text-align: center;
         }
@@ -186,34 +186,31 @@
                 <button>Add to Cart</button>
             </div>
         </div>
-        <!-- Repeat the product block for each product you want to list -->
     </div>
 </main>
 
 <script>
-    // JavaScript to handle adding to cart (as an example)
     document.querySelectorAll('.product').forEach(product => {
         product.addEventListener('click', function(event) {
-            // Code to handle product click that is not the button
             console.log('Product clicked!');
         });
     });
 
     document.querySelectorAll('.product button').forEach(button => {
         button.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent the .product click event
+            event.stopPropagation();
             const originalText = this.textContent;
             this.textContent = 'Adding...';
             this.disabled = true;
             setTimeout(() => {
                 this.textContent = 'Added to Cart';
                 this.classList.add('added-to-cart');
-            }, 500); // Mocking an async action with 500ms delay
+            }, 500);
             setTimeout(() => {
                 this.textContent = originalText;
                 this.disabled = false;
                 this.classList.remove('added-to-cart');
-            }, 3000); // Reset after 3 seconds for demonstration
+            }, 3000);
         });
     });
 
