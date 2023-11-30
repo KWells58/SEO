@@ -3,5 +3,49 @@
 	<url>
 		<loc>http://zazaforfeet.com/</loc>
 		<lastmod>2023-10-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>http://zazaforfeet.com/aboutUs.html</loc>
+		<lastmod>2023-11-15</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+
+	<url>
+		<loc>http://zazaforfeet.com/form.html</loc>
+		<lastmod>2023-11-18</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>http://zazaforfeet.com/contact.html</loc>
+		<lastmod>2023-11-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+
+	<url>
+		<loc>http://zazaforfeet.com/blog.html</loc>
+		<lastmod>2023-11-22</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
+
+	<url>
+		<loc>http://zazaforfeet.com/merch.html</loc>
+		<lastmod>2023-11-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>http://zazaforfeet.com/shop.html</loc>
+		<lastmod>2023-11-28</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
 	</url>
 </urlset>
